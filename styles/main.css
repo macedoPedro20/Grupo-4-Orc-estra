@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Minicomputer';
+    src: url('../fonts/Minicomputer-Regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minicomputer';
+    src: url('../fonts/Minicomputer-Bold.woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --amarelo: #eefa45;
+    --verde-principal: #133842;
+    --verde-secundario: #0A3041;
+    --branco-fundo: #EFEFEF;
+    --branco-padrao: #FFFFFF;
+    --fonte-titulo: 'Minicomputer';
+    --fonte-texto: 'Space Grotesk', sans-serif;
+}
+
+body {
+    width: 100vw;
+    background-color: var(--branco-fundo);
+    margin: 0;
+}
+
+header {
+    height: 144px;
+    background-color: var(--branco-padrao);
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+    
+}
+
+.textos-header {
+    display: flex;
+    gap: 50px;
+    font-family: var(--fonte-titulo);
+    font-size: 36px;
+}
+
+header a {
+    text-decoration: none;
+    color: #0A3041;
+}
+
+header img {
+    margin-left: auto;
+}
