@@ -53,12 +53,10 @@ main {
 }
 
 .box-mensagem {
-  margin-top: 395px;
-  width: 892px;
-  max-width: 100%;
+  align-items: center;
+  width: 62%;
   flex-shrink: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -85,5 +83,9 @@ main {
   line-height: normal;
 }
 
-.retangulo {
+.container {
+  margin-top: auto;
+  width: 100%;
+  height: 32%;
+  background-color: var(--verde-cor-2);
 }
