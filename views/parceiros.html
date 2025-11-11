@@ -68,6 +68,45 @@
                 </div>
             </div>
         </section>
+
+        <script>
+
+            const slider = document.querySelector('.carrossel-slider');
+            let clicando = false;
+            let posicaoInicial;
+            let posicaoCarrossel;
+
+            slider.addEventListener('mousedown', (e) => {
+                clicando = true;
+                slider.classList.add('active');
+
+                posicaoInicial = e.pageX - slider.offsetLeft;
+                console.log(posicaoInicial);
+                posicaoCarrossel = slider.scrollLeft;
+            })
+
+            slider.addEventListener('mouseup', () =>{
+                clicando = false;
+                slider.classList.remove('active');
+            })
+            slider.addEventListener('mouseleave', () =>{
+                clicando = false;
+                slider.classList.remove('active');
+            })
+            slider.addEventListener('dragstart', (e) => {
+                e.preventDefault(); 
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+                if(!clicando) return;
+                e.preventDefault();
+
+                const x = e.pageX - slider.offsetLeft;
+                const mover = x - posicaoInicial;
+                slider.scrollLeft = posicaoCarrossel - mover;
+            })
+
+        </script>
         
     </main>
 

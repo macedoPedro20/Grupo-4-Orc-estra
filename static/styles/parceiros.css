@@ -24,9 +24,15 @@
     align-items: center;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    cursor: grab;
+    user-select: none;
 }
 .carrossel-slider::-webkit-scrollbar {
     display: none; 
+}
+.carrossel-slider.active {
+    cursor: grabbing;
+    
 }
 
 .carrossel-track{
