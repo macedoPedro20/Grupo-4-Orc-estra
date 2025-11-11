@@ -36,7 +36,7 @@
 .servico-card h2 {
     font-size: 1.25rem;
     
-    font-family: var(--fonte-titulo); 
+    font-family: var(--fonte-texto); 
     color: #000000;
     margin-bottom: 15px;
 }
