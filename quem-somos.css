@@ -1,48 +1,99 @@
 .quem-somos {
   background-color: var(--branco-fundo);
   text-align: center;
-  padding: 80px 120px;
+  padding: 80px 10%;
   font-family: var(--fonte-texto);
   color: var(--verde-cor-2);
 }
 
+/* Título principal */
 .quem-somos h1 {
   font-family: var(--fonte-titulo);
-  font-size: 48px;
+  font-size: 3rem;
   color: var(--verde-cor-2);
   margin-bottom: 40px;
+  letter-spacing: 2px;
 }
 
+/* Texto de descrição */
 .descricao {
   max-width: 900px;
-  margin: 0 auto 80px auto;
-  font-size: 22px;
-  line-height: 1.6;
+  margin: 0 auto 80px;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: var(--verde-cor-2);
+  opacity: 0.9;
 }
 
+/* Subtítulo da diretoria */
 .titulo-diretoria {
   font-family: var(--fonte-titulo);
-  font-size: 36px;
+  font-size: 2.2rem;
   color: var(--verde-cor-2);
   margin-bottom: 48px;
+  letter-spacing: 1px;
 }
 
+/* Cards da diretoria */
 .diretoria {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  align-items: stretch;
+  gap: 60px;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 
 .card {
+  background-color: var(--branco);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
-  font-family: var(--fonte-titulo);
-  color: var(--verde-cor-2);
-  font-size: 20px;
+  padding: 24px 32px;
+  width: 220px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
-  width: 160px;
+  width: 140px;
   height: auto;
-  margin-bottom: 12px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.card p {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-cor-2);
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .quem-somos {
+    padding: 60px 5%;
+  }
+
+  .descricao {
+    font-size: 1.1rem;
+  }
+
+  .diretoria {
+    gap: 40px;
+  }
+
+  .card {
+    width: 180px;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 120px;
+  }
 }
