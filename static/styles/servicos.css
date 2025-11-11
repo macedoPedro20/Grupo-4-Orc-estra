@@ -1,128 +1,49 @@
-@font-face {
-    font-family: 'Minicomputer';
-    src: url('../fonts/Minicomputer-Regular.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.servicos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
 }
 
-@font-face {
-    font-family: 'Minicomputer';
-    src: url('../fonts/Minicomputer-Bold.woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+.servicos h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color:#0A3041; 
 }
 
-:root {
-    --amarelo: #eefa45;
-    --verde-cor-3: #133842;
-    --verde-cor-2: #0A3041;
-    --branco-fundo: #EFEFEF;
-    --branco-padrao: #FFFFFF;
-    --fonte-titulo: 'Minicomputer';
-    --fonte-texto: 'Space Grotesk', sans-serif;
+.servicos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
 
-body {
-    width: 100vw;
-    background-color: var(--branco-fundo);
-    margin: 0;
-    overflow-x: hidden;
+.servico-card {
+    background-color: var(--branco-padrao); 
+    border: 1px solid #EFEFEF;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-header {
-    height: 144px;
-    background-color: var(--branco-padrao);
-    display: flex;
-    align-items: center;
-    padding: 0 48px;
+.servico-card img {
+    height: 70px;
+    margin-bottom: 20px;
 }
 
-.textos-header {
-    display: flex;
-    gap: 48px;
-    font-family: var(--fonte-titulo);
-    font-weight: bold;
-    font-size: 36px;
-    flex-grow: 1;
+.servico-card h2 {
+    font-size: 1.25rem;
+    
+    font-family: var(--fonte-titulo); 
+    color: #000000;
+    margin-bottom: 15px;
 }
 
-header a {
-    text-decoration: none;
-    color: #0A3041;
-}
-
-header img {
-    margin-left: auto;
-}
-
-
-footer {
-    background-color: var(--verde-cor-3);
-    color: var(--branco-padrao);
-    font-family: var(--fonte-texto);
-    font-weight: normal;
-    height: 446px;
-    padding: 40px 48px;
-}
-
-.textos-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-footer h1 {
-    font-weight: bold;
-    font-size: 48px;
-    margin: auto;
-}
-
-footer h2 {
-    font-weight: normal;
-    font-size: 24px;
-    max-width: 660px;
-    margin: auto 0;
-}
-
-footer button {
-    background-color: #eefa45;
-    color: var(--verde-cor-3);
-    font-family: var(--fonte-texto);
-    font-weight: normal;
-    border: 0;
-    border-radius: 15px;
-    width: 344px;
-    height: 64px;
-    font-size: 28px;
-    margin-top: 36px;
-}
-
-.aviso {
-    font-weight: normal;
-    font-size: 16px;
-    margin-top: 40px;
-}
-
-.footer-informaçao div {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    font-size: 28px;
-    margin-right: 20px;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 64px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: var(--branco-padrao);
-    font-family: var(--fonte-titulo);
-    font-weight: normal;
-    font-size: 32px;
+.servico-card p {
+    font-size: 0.9rem;
+  
+    font-family: var(--fonte-texto); 
+    color: #0a3041;
+    line-height: 1.6;
 }
