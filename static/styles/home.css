@@ -131,7 +131,7 @@ main {
     z-index: 1000;
     transition: left 0.3s ease;
     box-shadow: 2px 0 10px rgba(255, 10, 10, 0.1);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .sidebar-mobile.sidebar--open {
@@ -164,20 +164,11 @@ main {
 
 /* Botão Hamburguer - Só aparece no mobile */
 .mobile-menu-btn {
-    flex-direction: column;
     background: none;
     border: none;
-    cursor: pointer;
     z-index: 1001;
 }
 
-.mobile-menu-btn span {
-    width: 45px;
-    height: 3px;
-    background: var(--branco-padrao);
-    margin: 5px 0;
-    transition: 0.3s;
-}
 
 /* Media Query - Sidebar aparece apenas no mobile */
 @media (max-width: 440px) {
