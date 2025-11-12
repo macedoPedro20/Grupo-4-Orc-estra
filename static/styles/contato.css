@@ -120,6 +120,11 @@ form input {
   margin-bottom: 40px;
 }
 
+form input:focus {
+  border-color: #eefa45;
+  outline: none;
+}
+
 form input::placeholder {
   color: #ffffff;
   font-family: var(--fonte-texto);
@@ -149,6 +154,11 @@ form input::placeholder {
   border-radius: 10px;
   padding: 8px 10px;
   margin-bottom: 32px;
+}
+
+.mensagem:focus {
+  border-color: #eefa45;
+  outline: none;
 }
 
 .mensagem::placeholder {
