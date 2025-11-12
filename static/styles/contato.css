@@ -29,7 +29,7 @@ main {
 }
 
 .titulo {
-  font-family: var(--fonte-texto);
+  font-family: var(--fonte-titulo);
   font-size: 48px;
   font-weight: bold;
   color: #0a3041;
