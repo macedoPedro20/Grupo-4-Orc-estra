@@ -119,5 +119,85 @@ main {
   z-index: 1;
 }
 
+/* Sidebar Mobile */
+.sidebar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    max-width: 180px;
+    height: 100vh;
+    background: var(--verde-cor-2);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(255, 10, 10, 0.1);
+    overflow: hidden;
+}
 
+.sidebar-mobile.sidebar--open {
+    left: 0;
+}
+
+.sidebar-content {
+    padding: 0;
+    position: relative;
+}
+
+
+.sidebar-nav {
+    display: grid;
+    flex-direction: column;
+    row-gap: 4.5rem;
+    padding: 11rem 0 3.5rem 0;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    text-align: center;
+
+    color: var(--branco-padrao);
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+
+/* Botão Hamburguer - Só aparece no mobile */
+.mobile-menu-btn {
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    width: 45px;
+    height: 3px;
+    background: var(--branco-padrao);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Media Query - Sidebar aparece apenas no mobile */
+@media (max-width: 440px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* Esconde a navegação desktop no mobile */
+    .nav-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 441px) {
+    .sidebar-mobile {
+        display: none !important;
+    }
+    
+    .sidebar-overlay {
+        display: none !important;
+    }
+}
 
