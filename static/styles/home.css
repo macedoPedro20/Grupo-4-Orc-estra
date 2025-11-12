@@ -216,3 +216,120 @@ main {
     display: none !important;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* Banner principal */
+  .banner1 {
+    min-height: 100vh;
+    height: auto;
+    background-position: center;
+    padding: 4rem 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mensagem-1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin: 10rem 1rem 3rem 1rem;
+    line-height: 1.5;
+  }
+
+  .subtitulo {
+    position: static;
+    transform: none;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  /* Container de projetos */
+  .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: auto;            /* permite rolar lateralmente */
+  scroll-behavior: smooth;     /* rolagem suave */
+  padding: 2rem 1rem;
+  height: auto;
+  scrollbar-width: thin;       /* Firefox */
+  scrollbar-color: #0A3041 #e0e0e0; /* cores da barra */
+}
+
+.container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #0A3041;
+  border-radius: 4px;
+}
+
+.container > div {
+  flex: 0 0 auto;
+  width: 220px;
+  text-align: center;
+  background: transparent; /* remove o branco */
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.container > div p {
+  color: #fff; /* texto branco para contraste */
+  font-size: 1.2rem;
+  font-family: var(--fonte-texto);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+
+.container > div:hover {
+  transform: translateY(-5px);
+}
+
+.container img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  font-size: 1.2rem;
+  color: #0A3041;
+  font-family: var(--fonte-texto);
+}
+
+  /* Sidebar Mobile */
+  .sidebar-mobile {
+    width: 80%;
+    max-width: 280px;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+  }
+
+  .sidebar-nav {
+    padding: 8rem 0 3rem 0;
+    row-gap: 3rem;
+  }
+
+  .sidebar-nav a {
+    font-size: 1.25rem;
+  }
+
+  /* Ajuste do botão hamburguer */
+  .mobile-menu-btn {
+    top: 1rem;
+    left: 1rem;
+  }
+}
