@@ -161,10 +161,19 @@ form input::placeholder {
 form button {
   background-color: #eefa45;
   color: var(--verde-cor-3);
-  border: 0;
+  border: 3px solid transparent;
   border-radius: 12px;
   min-height: 48px;
   min-width: 240px;
   width: 35%;
   font-size: 24px;
+}
+
+form button:hover {
+  border-color: var(--branco-padrao);
+}
+
+form button:active {
+    border-color: #eefa45;
+    background-color: var(--branco-fundo)
 }

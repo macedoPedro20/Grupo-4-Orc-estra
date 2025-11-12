@@ -53,8 +53,39 @@ header {
 
 header a {
     text-decoration: none;
+    position: relative;
     color: #0A3041;
+    transition: transform 0.3s ease;
+    background-color: transparent;
 }
+
+header a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #0A3041;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease ;
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header a:active {
+    color: #eefa45;
+}
+
+header a:active::after {
+    background-color: #eefa45;
+}
+
+
 
 header img {
     margin-left: auto;
@@ -66,7 +97,7 @@ footer {
     color: var(--branco-padrao);
     font-family: var(--fonte-texto);
     font-weight: normal;
-    height: 446px;
+    height: 466px;
     padding: 40px 48px;
 }
 
@@ -94,12 +125,21 @@ footer button {
     color: var(--verde-cor-3);
     font-family: var(--fonte-texto);
     font-weight: normal;
-    border: 0;
+    border: 4px solid transparent;
     border-radius: 15px;
     width: 344px;
     height: 64px;
     font-size: 28px;
     margin-top: 36px;
+}
+
+.button-contato:hover {
+  border-color: var(--branco-padrao);
+}
+
+.button-contato:active {
+    border-color: #eefa45;
+    background-color: var(--branco-fundo)
 }
 
 .aviso {
@@ -125,7 +165,36 @@ footer button {
 .footer-links a {
     text-decoration: none;
     color: var(--branco-padrao);
+    position: relative;
     font-family: var(--fonte-titulo);
     font-weight: normal;
     font-size: 32px;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+}
+
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--branco-padrao);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease ;
+}
+
+.footer-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.footer-links a:active {
+    color: #eefa45;
+}
+
+.footer-links a:active::after {
+    background-color: #eefa45;
 }
