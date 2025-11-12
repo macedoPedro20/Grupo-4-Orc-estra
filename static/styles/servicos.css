@@ -48,3 +48,69 @@
     color: #0a3041;
     line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .servicos {
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .servicos h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .servico-card {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .servico-card img {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .servico-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .servico-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  /* Ajustes adicionais para telas muito pequenas */
+  @media (max-width: 480px) {
+    .servicos h1 {
+      font-size: 1.75rem;
+      margin-bottom: 25px;
+    }
+
+    .servico-card {
+      padding: 16px;
+    }
+
+    .servico-card img {
+      height: 50px;
+      margin-bottom: 12px;
+    }
+
+    .servico-card h2 {
+      font-size: 1rem;
+    }
+
+    .servico-card p {
+      font-size: 0.8rem;
+    }
+  }
+}   
