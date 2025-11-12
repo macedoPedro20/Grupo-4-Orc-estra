@@ -49,3 +49,15 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 800px){
+    body{
+        text-align: center;
+    }
+    .carrossel-slider{
+        padding: 10px 0;
+    }
+    .carrossel-item img{
+        max-height: 175px;
+    }
+}
