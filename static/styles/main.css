@@ -97,7 +97,7 @@ footer {
     color: var(--branco-padrao);
     font-family: var(--fonte-texto);
     font-weight: normal;
-    height: 466px;
+    min-height: 466px;
     padding: 40px 48px;
 }
 
@@ -197,4 +197,32 @@ footer button {
 
 .footer-links a:active::after {
     background-color: #eefa45;
+}
+
+@media (max-width: 800px){
+    
+    .textos-header{
+        display: none;
+    }
+    .footer-links a{
+        font-size: 0.75rem;
+        
+    }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .textos-footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-informaçao div{
+        margin-left: 20%;
+    }
+    .footer-informaçao p{
+        font-size: 0.9rem ;
+        line-height: 0.3;
+    }
+
 }
