@@ -279,6 +279,7 @@ body.sidebar-open {
   width: 32px;
   height: 32px;
   filter: invert(1);
+  margin: 10px;
 }
 
 
