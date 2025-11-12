@@ -93,6 +93,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center ;
+  max-width: 640px;
 }
 
 form h1 {
@@ -111,7 +112,7 @@ form input {
   border-radius: 10px;
   color: #ffffff;
   height: 48px;
-  width: 280px;
+  width: 100%;
   font-size: 18px;
   padding: 0px 20px;
   align-items: center;
@@ -137,7 +138,6 @@ form input::placeholder {
 
 .mensagem {
   width: 100%;
-  max-width: 640px;
   box-sizing: border-box;
   height: 148px;
   background-color: #133842;
@@ -178,7 +178,7 @@ form button:active {
     background-color: var(--branco-fundo)
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .titulo {
     font-size: 36px;
     margin-top: 48px;
@@ -242,5 +242,104 @@ form button:active {
   form button {
     width: 80%;
     font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 28px;
+    margin-top: 36px;
+    padding: 0 15px;
+  }
+
+  .informaçoes {
+    flex-direction: column;
+    gap: 30px;
+    padding: 24px 15px;
+    margin-top: 36px;
+  }
+
+  .informaçoes p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .email-telefone,
+  .redes-sociais {
+    width: 100%;
+  }
+
+  .texto-logo {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+
+  .texto-logo img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .texto-logo p {
+    font-size: 18px;
+  }
+
+  .email-telefone .texto-logo:first-of-type {
+    margin-bottom: 15px;
+  }
+
+  form {
+    width: 95%;
+    margin: 40px auto 60px;
+    padding: 20px 12px;
+    border-radius: 20px;
+  }
+
+  form h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 0 10px;
+  }
+
+  .form-informaçao {
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+   .form-content {
+    max-width: 100%; 
+    padding: 0 15px;
+  }
+
+  form input {
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  form input::placeholder {
+    font-size: 16px;
+  }
+
+  .mensagem {
+    max-width: 100%;
+    height: 120px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .mensagem::placeholder {
+    font-size: 16px;
+  }
+
+  form button {
+    width: 90%;
+    font-size: 18px;
+    min-height: 44px;
   }
 }
