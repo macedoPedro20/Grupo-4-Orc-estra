@@ -75,7 +75,47 @@
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
+/* TABLET (768px a 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .servicos {
+    width: 92%;
+    margin: 35px auto;
+  }
+
+  .servicos h1 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .servico-card {
+    padding: 22px;
+    max-width: 100%;
+  }
+
+  .servico-card img {
+    height: 65px;
+    margin-bottom: 18px;
+  }
+
+  .servico-card h2 {
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+  }
+
+  .servico-card p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+}
+
+/* CELULAR (≤ 767px) */
+@media (max-width: 767px) {
   .servicos {
     width: 95%;
     margin: 30px auto;
@@ -114,29 +154,43 @@
     font-size: 0.85rem;
     line-height: 1.5;
   }
+}
 
-  /* Ajustes adicionais para telas muito pequenas */
-  @media (max-width: 480px) {
-    .servicos h1 {
-      font-size: 1.75rem;
-      margin-bottom: 25px;
-    }
-
-    .servico-card {
-      padding: 16px;
-    }
-
-    .servico-card img {
-      height: 50px;
-      margin-bottom: 12px;
-    }
-
-    .servico-card h2 {
-      font-size: 1rem;
-    }
-
-    .servico-card p {
-      font-size: 0.8rem;
-    }
+/* CELULAR PEQUENO (≤ 480px) */
+@media (max-width: 480px) {
+  .servicos {
+    width: 98%;
+    margin: 25px auto;
   }
-}   
+
+  .servicos h1 {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+
+  .servicos-grid {
+    gap: 18px;
+    padding: 0 10px;
+  }
+
+  .servico-card {
+    padding: 18px;
+    max-width: 350px;
+  }
+
+  .servico-card img {
+    height: 55px;
+    margin-bottom: 12px;
+  }
+
+  .servico-card h2 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+
+  .servico-card p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+}

@@ -188,22 +188,80 @@ form button:active {
     background-color: var(--branco-fundo)
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) and (min-width: 768px) {
   .titulo {
-    font-size: 36px;
-    margin-top: 48px;
+    font-size: 42px;
+    margin-top: 60px;
     text-align: center;
   }
 
   .informaçoes {
+    gap: 120px;
+    padding: 40px 0;
+    margin-top: 60px;
+  }
+
+  .informaçoes p {
+    font-size: 28px;
+  }
+
+  .texto-logo {
+    gap: 14px;
+  }
+
+  form {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    margin: 80px auto 100px;
+    padding: 32px 24px;
+  }
+
+  form h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .form-informaçao {
+    gap: 60px;
+    max-width: 100%;
+  }
+
+  form input {
+    height: 46px;
+    font-size: 17px;
+  }
+
+  .mensagem {
+    height: 140px;
+    font-size: 17px;
+  }
+
+  form button {
+    width: 50%;
+    font-size: 22px;
+  }
+}
+
+/* CELULAR (≤ 767px) */
+@media (max-width: 767px) {
+  .titulo {
+    font-size: 32px;
+    margin-top: 48px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .informaçoes {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     padding: 32px 20px;
     margin-top: 48px;
   }
 
   .informaçoes p {
     font-size: 24px;
+    text-align: center;
   }
 
   .email-telefone,
@@ -214,6 +272,16 @@ form button:active {
   .texto-logo {
     margin-top: 12px;
     margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .texto-logo img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .texto-logo p {
+    font-size: 20px;
   }
 
   .email-telefone .texto-logo:first-of-type {
@@ -225,102 +293,26 @@ form button:active {
     height: auto;
     margin: 60px auto 80px;
     padding: 24px 16px;
+    border-radius: 20px;
   }
 
   form h1 {
     font-size: 28px;
     text-align: center;
     margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .form-content {
+    max-width: 100%;
+    padding: 0 10px;
   }
 
   .form-informaçao {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-  }
-
-  form input {
-    width: 100%;
-    margin-bottom: 0;
-  }
-
-  .mensagem {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-
-  form button {
-    width: 80%;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .titulo {
-    font-size: 28px;
-    margin-top: 36px;
-    padding: 0 15px;
-  }
-
-  .informaçoes {
-    flex-direction: column;
-    gap: 30px;
-    padding: 24px 15px;
-    margin-top: 36px;
-  }
-
-  .informaçoes p {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .email-telefone,
-  .redes-sociais {
-    width: 100%;
-  }
-
-  .texto-logo {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    justify-content: center;
-  }
-
-  .texto-logo img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .texto-logo p {
-    font-size: 18px;
-  }
-
-  .email-telefone .texto-logo:first-of-type {
-    margin-bottom: 15px;
-  }
-
-  form {
-    width: 95%;
-    margin: 40px auto 60px;
-    padding: 20px 12px;
-    border-radius: 20px;
-  }
-
-  form h1 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 16px;
-    padding: 0 10px;
-  }
-
-  .form-informaçao {
-    flex-direction: column;
-    gap: 15px;
     max-width: 100%;
-    padding: 0 10px;
-  }
-   .form-content {
-    max-width: 100%; 
-    padding: 0 15px;
   }
 
   form input {
@@ -335,12 +327,10 @@ form button:active {
   }
 
   .mensagem {
-    max-width: 100%;
+    width: 100%;
     height: 120px;
     font-size: 16px;
-    margin-bottom: 20px;
-    padding: 0 10px;
-    box-sizing: border-box;
+    margin-bottom: 24px;
   }
 
   .mensagem::placeholder {
@@ -348,8 +338,71 @@ form button:active {
   }
 
   form button {
+    width: 80%;
+    font-size: 20px;
+    min-height: 44px;
+  }
+}
+
+/* CELULAR PEQUENO (≤ 480px) */
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 28px;
+    margin-top: 36px;
+    padding: 0 15px;
+  }
+
+  .informaçoes {
+    gap: 25px;
+    padding: 24px 15px;
+    margin-top: 36px;
+  }
+
+  .informaçoes p {
+    font-size: 20px;
+  }
+
+  .texto-logo {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .texto-logo p {
+    font-size: 18px;
+  }
+
+  form {
+    width: 95%;
+    margin: 40px auto 60px;
+    padding: 20px 12px;
+  }
+
+  form h1 {
+    font-size: 24px;
+  }
+
+  form input {
+    height: 42px;
+    font-size: 15px;
+    padding: 0 16px;
+  }
+
+  form input::placeholder {
+    font-size: 15px;
+  }
+
+  .mensagem {
+    height: 100px;
+    font-size: 15px;
+  }
+
+  .mensagem::placeholder {
+    font-size: 15px;
+  }
+
+  form button {
     width: 90%;
     font-size: 18px;
-    min-height: 44px;
+    min-height: 42px;
   }
 }

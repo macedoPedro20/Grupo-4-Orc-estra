@@ -74,26 +74,130 @@
   letter-spacing: 0.5px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* TABLET (768px a 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
   .quem-somos {
-    padding: 60px 5%;
+    padding: 60px 8%;
+  }
+
+  .quem-somos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 35px;
   }
 
   .descricao {
-    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .titulo-diretoria {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
   }
 
   .diretoria {
     gap: 40px;
+    margin-bottom: 50px;
   }
 
   .card {
-    width: 180px;
-    padding: 20px;
+    width: 200px;
+    padding: 20px 24px;
   }
 
   .card img {
     width: 120px;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+/* CELULAR (≤ 767px) */
+@media (max-width: 767px) {
+  .quem-somos {
+    padding: 40px 5%;
+  }
+
+  .quem-somos h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+  }
+
+  .descricao {
+    max-width: 100%;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .titulo-diretoria {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+  }
+
+  .diretoria {
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 250px;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 100px;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* CELULAR PEQUENO (≤ 480px) */
+@media (max-width: 480px) {
+  .quem-somos {
+    padding: 30px 4%;
+  }
+
+  .quem-somos h1 {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+  }
+
+  .descricao {
+    font-size: 1rem;
+    margin: 0 auto 40px;
+    line-height: 1.4;
+  }
+
+  .titulo-diretoria {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .diretoria {
+    gap: 25px;
+    margin-bottom: 35px;
+  }
+
+  .card {
+    width: 220px;
+    padding: 18px;
+  }
+
+  .card img {
+    width: 90px;
+  }
+
+  .card p {
+    font-size: 0.9rem;
   }
 }
