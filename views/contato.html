@@ -56,16 +56,16 @@
           </div>
         </div>
       </div>
-
-      <form>
+      
+      <form id="form">
         <div class="form-content">
           <h1>Entre em contato com a gente:</h1>
           <div class="form-informaçao">
-            <input type="text" required placeholder="Nome" />
-            <input type="email" required placeholder="Email" />
+            <input type="text" name="name" required placeholder="Nome" />
+            <input type="email" name="email" required placeholder="Email" />
           </div>
-          <textarea class="mensagem" required placeholder="Mensagem"></textarea>
-          <button>Enviar formulário</button>
+          <textarea class="mensagem" name="message" required placeholder="Mensagem"></textarea>
+          <button type="submit">Enviar formulário</button>
         </div>
       </form>
     </main>
@@ -111,4 +111,6 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="../static/scripts/main.js"></script>
 </html>
