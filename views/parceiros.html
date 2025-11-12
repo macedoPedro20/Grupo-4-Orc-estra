@@ -1,156 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="static/img/logo.png" />
-    <link rel="stylesheet" href="../static/styles/main.css" />
-    <link rel="stylesheet" href="../static/styles/parceiros.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Parceiros</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="static/img/logo.png" />
+  <link rel="stylesheet" href="../static/styles/main.css" />
+  <link rel="stylesheet" href="../static/styles/parceiros.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <title>Parceiros</title>
 </head>
 
 <body>
-    <header>
-      <div class="textos-header">
+  <header>
+    <button class="mobile-menu-btn" id="mobileMenuBtn"> <img src="../static/img/hamburger.svg" alt="hamburger">
+    </button>
+    <div class="textos-header">
+      <a href="../index.html">Home</a>
+      <a href="../views/quem-somos.html">Quem Somos</a>
+      <a href="../views/parceiros.html">Parceirias</a>
+      <a href="../views/contato.html">Contatos</a>
+      <a href="../views/servicos.html">Serviços</a>
+    </div>
+    <a href="../index.html"><img src="../static/img/logo.png" alt="inovatech logo" /></a>
+  </header>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar-mobile" id="sidebarMobile">
+    <div class="sidebar-content">
+      <nav class="sidebar-nav">
         <a href="../index.html">Home</a>
-        <a href="../views/quem-somos.html">Quem Somos</a>
-        <a href="../views/parceiros.html">Parceirias</a>
-        <a href="../views/contato.html">Contatos</a>
-        <a href="../views/servicos.html">Serviços</a>
+        <a href="./quem-somos.html">Quem Somos</a>
+        <a href="./parceiros.html">Parceirias</a>
+        <a href="./contato.html">Contatos</a>
+        <a href="./servicos.html">Serviços</a>
+      </nav>
+    </div>
+  </aside>
+  <main>
+    <section class="parceiros">
+      <h1 class="titulo">Nossos Parceiros</h1>
+
+      <div class="carrossel-slider">
+
+        <div class="carrossel-track">
+
+          <div class="carrossel-item">
+            <img src="../static/img/microsoft logo 1.png" alt="microsoft">
+          </div>
+
+          <div class="carrossel-item">
+            <img src="../static/img/logo amazon 1.png" alt="amazon">
+          </div>
+
+          <div class="carrossel-item">
+            <img src="../static/img/logo-google-256 1.png" alt="google">
+          </div>
+
+          <div class="carrossel-item">
+            <img src="../static/img/logo orcestra 1.png" alt="orcestra">
+          </div>
+
+          <div class="carrossel-item">
+            <img src="../static/img/logo-ibm-256 1.png" alt="IBM">
+          </div>
+
+          <div class="carrossel-item">
+            <img src="../static/img/github-256 1.png" alt="Git hub">
+          </div>
+
+          <div class="carrossel-item">
+            <img src="../static/img/logo-dell.png" alt="Dell">
+          </div>
+
+        </div>
       </div>
-      <a href="../index.html"
-        ><img src="../static/img/logo.png" alt="inovatech logo"
-      /></a>
-    </header>
+    </section>
 
-    <main>
-        <section class="parceiros">
-            <h1 class="titulo">Nossos Parceiros</h1>
-        
-            <div class="carrossel-slider">
+    <script>
 
-                <div class="carrossel-track">
-                    
-                    <div class="carrossel-item">
-                        <img src="../static/img/microsoft logo 1.png" alt="microsoft">
-                    </div>
+      const slider = document.querySelector('.carrossel-slider');
+      let clicando = false;
+      let posicaoInicial;
+      let posicaoCarrossel;
 
-                    <div class="carrossel-item">
-                        <img src="../static/img/logo amazon 1.png" alt="amazon">
-                    </div>
+      slider.addEventListener('mousedown', (e) => {
+        clicando = true;
+        slider.classList.add('active');
 
-                    <div class="carrossel-item">
-                        <img src="../static/img/logo-google-256 1.png" alt="google">
-                    </div>
+        posicaoInicial = e.pageX - slider.offsetLeft;
+        console.log(posicaoInicial);
+        posicaoCarrossel = slider.scrollLeft;
+      })
 
-                    <div class="carrossel-item">
-                        <img src="../static/img/logo orcestra 1.png" alt="orcestra">
-                    </div>
+      slider.addEventListener('mouseup', () => {
+        clicando = false;
+        slider.classList.remove('active');
+      })
+      slider.addEventListener('mouseleave', () => {
+        clicando = false;
+        slider.classList.remove('active');
+      })
+      slider.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+      });
 
-                    <div class="carrossel-item">
-                        <img src="../static/img/logo-ibm-256 1.png" alt="IBM">
-                    </div>
-                    
-                    <div class="carrossel-item">
-                        <img src="../static/img/github-256 1.png" alt="Git hub">
-                    </div>
+      slider.addEventListener('mousemove', (e) => {
+        if (!clicando) return;
+        e.preventDefault();
 
-                    <div class="carrossel-item">
-                        <img src="../static/img/logo-dell.png" alt="Dell">
-                    </div>
+        const x = e.pageX - slider.offsetLeft;
+        const mover = x - posicaoInicial;
+        slider.scrollLeft = posicaoCarrossel - mover;
+      })
 
-                </div>
-            </div>
-        </section>
+    </script>
 
-        <script>
+  </main>
 
-            const slider = document.querySelector('.carrossel-slider');
-            let clicando = false;
-            let posicaoInicial;
-            let posicaoCarrossel;
-
-            slider.addEventListener('mousedown', (e) => {
-                clicando = true;
-                slider.classList.add('active');
-
-                posicaoInicial = e.pageX - slider.offsetLeft;
-                console.log(posicaoInicial);
-                posicaoCarrossel = slider.scrollLeft;
-            })
-
-            slider.addEventListener('mouseup', () =>{
-                clicando = false;
-                slider.classList.remove('active');
-            })
-            slider.addEventListener('mouseleave', () =>{
-                clicando = false;
-                slider.classList.remove('active');
-            })
-            slider.addEventListener('dragstart', (e) => {
-                e.preventDefault(); 
-            });
-
-            slider.addEventListener('mousemove', (e) => {
-                if(!clicando) return;
-                e.preventDefault();
-
-                const x = e.pageX - slider.offsetLeft;
-                const mover = x - posicaoInicial;
-                slider.scrollLeft = posicaoCarrossel - mover;
-            })
-
-        </script>
-        
-    </main>
-
-    <footer>
-      <div class="textos-footer">
+  <footer>
+    <div class="textos-footer">
+      <div>
+        <h1>Inovatech</h1>
+        <h2>
+          Chegou a hora de dar vida ao seu projeto. Conte com a nossa
+          expertise. Vamos conversar?
+        </h2>
+        <button type="button" class="button-contato" onclick="window.location.href='./contato.html'">Entre em
+          contato</button>
+        <p class="aviso">
+          Esse projeto foi feito durante o processo trainee.
+        </p>
+      </div>
+      <div class="footer-informaçao">
         <div>
-          <h1>Inovatech</h1>
-          <h2>
-            Chegou a hora de dar vida ao seu projeto. Conte com a nossa
-            expertise. Vamos conversar?
-          </h2>
-          <button type="button" class="button-contato" onclick="window.location.href='./contato.html'">Entre em contato</button>
-          <p class="aviso">
-            Esse projeto foi feito durante o processo trainee.
-          </p>
+          <p>Email:</p>
+          <p>inovatech@gmail.com</p>
         </div>
-        <div class="footer-informaçao">
-          <div>
-            <p>Email:</p>
-            <p>inovatech@gmail.com</p>
-          </div>
-          <div>
-            <p>Telefone:</p>
-            <p>(61) 97887-1209</p>
-          </div>
-          <div>
-            <p>Instagram:</p>
-            <p>inova.tech</p>
-          </div>
-          <div>
-            <p>Tiktok:</p>
-            <p>inova.techoficial</p>
-          </div>
+        <div>
+          <p>Telefone:</p>
+          <p>(61) 97887-1209</p>
+        </div>
+        <div>
+          <p>Instagram:</p>
+          <p>inova.tech</p>
+        </div>
+        <div>
+          <p>Tiktok:</p>
+          <p>inova.techoficial</p>
         </div>
       </div>
-      <div class="footer-links">
-        <a href="../index.html">Home</a>
-        <a href="quem-somos.html">Quem Somos</a>
-        <a href="parceiros.html">Parceirias</a>
-        <a href="contato.html">Contatos</a>
-        <a href="servicos.html">Serviços</a>
-      </div>
-    </footer>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="parceiros.html">Parceirias</a>
+      <a href="contato.html">Contatos</a>
+      <a href="servicos.html">Serviços</a>
+    </div>
+  </footer>
 
 </body>
+<script src="../static/scripts/sidebar.js"></script>
 
 </html>

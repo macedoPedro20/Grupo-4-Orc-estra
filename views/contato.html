@@ -1,116 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../static/img/logo.png" />
-    <link rel="stylesheet" href="../static/styles/main.css" />
-    <link rel="stylesheet" href="../static/styles/contato.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Contatos</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="textos-header">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../static/img/logo.png" />
+  <link rel="stylesheet" href="../static/styles/main.css" />
+  <link rel="stylesheet" href="../static/styles/contato.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <title>Contatos</title>
+</head>
+
+<body>
+  <header>
+    <button class="mobile-menu-btn" id="mobileMenuBtn"> <img src="../static/img/hamburger.svg" alt="hamburger">
+    </button>
+    <div class="textos-header">
+      <a href="../index.html">Home</a>
+      <a href="../views/quem-somos.html">Quem Somos</a>
+      <a href="../views/parceiros.html">Parceirias</a>
+      <a href="../views/contato.html">Contatos</a>
+      <a href="../views/servicos.html">Serviços</a>
+    </div>
+    <a href="../index.html"><img src="../static/img/logo.png" alt="inovatech logo" /></a>
+  </header>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar-mobile" id="sidebarMobile">
+    <div class="sidebar-content">
+      <nav class="sidebar-nav">
         <a href="../index.html">Home</a>
-        <a href="../views/quem-somos.html">Quem Somos</a>
-        <a href="../views/parceiros.html">Parceirias</a>
-        <a href="../views/contato.html">Contatos</a>
-        <a href="../views/servicos.html">Serviços</a>
-      </div>
-      <a href="../index.html"
-        ><img src="../static/img/logo.png" alt="inovatech logo"
-      /></a>
-    </header>
-
-    <main>
-      <h1 class="titulo">Contatos</h1>
-      <div class="informaçoes">
-        <div class="email-telefone">
-          <p>Email corporativo:</p>
-          <div class="texto-logo">
-            <img src="../static/img/email 1.svg" alt="email" />
-            <p>inovatech@gmail.com</p>
-          </div>
-          <p>Telefone:</p>
-          <div class="texto-logo">
-            <img src="../static/img/whatsapp 1.svg" alt="telefone inovatech" />
-            <p>(61) 97887-1209</p>
-          </div>
+        <a href="./quem-somos.html">Quem Somos</a>
+        <a href="./parceiros.html">Parceirias</a>
+        <a href="./contato.html">Contatos</a>
+        <a href="./servicos.html">Serviços</a>
+      </nav>
+    </div>
+  </aside>
+  <main>
+    <h1 class="titulo">Contatos</h1>
+    <div class="informaçoes">
+      <div class="email-telefone">
+        <p>Email corporativo:</p>
+        <div class="texto-logo">
+          <img src="../static/img/email 1.svg" alt="email" />
+          <p>inovatech@gmail.com</p>
         </div>
-        <div class="redes-sociais">
-          <p>Redes Sociais:</p>
-          <div class="texto-logo">
-            <img src="../static/img/instagram 1.svg" alt="instagram" />
-            <p>inova.tech</p>
-          </div>
-          <div class="texto-logo">
-            <img src="../static/img/tiktok 1.svg" alt="" />
-            <p>inova.techoficial</p>
-          </div>
+        <p>Telefone:</p>
+        <div class="texto-logo">
+          <img src="../static/img/whatsapp 1.svg" alt="telefone inovatech" />
+          <p>(61) 97887-1209</p>
         </div>
       </div>
-      
-      <form id="form">
-        <div class="form-content">
-          <h1>Entre em contato com a gente:</h1>
-          <div class="form-informaçao">
-            <input type="text" name="name" required placeholder="Nome" />
-            <input type="email" name="email" required placeholder="Email" />
-          </div>
-          <textarea class="mensagem" name="message" required placeholder="Mensagem"></textarea>
-          <button type="submit">Enviar formulário</button>
+      <div class="redes-sociais">
+        <p>Redes Sociais:</p>
+        <div class="texto-logo">
+          <img src="../static/img/instagram 1.svg" alt="instagram" />
+          <p>inova.tech</p>
         </div>
-      </form>
-    </main>
+        <div class="texto-logo">
+          <img src="../static/img/tiktok 1.svg" alt="" />
+          <p>inova.techoficial</p>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-      <div class="textos-footer">
+    <form id="form">
+      <div class="form-content">
+        <h1>Entre em contato com a gente:</h1>
+        <div class="form-informaçao">
+          <input type="text" name="name" required placeholder="Nome" />
+          <input type="email" name="email" required placeholder="Email" />
+        </div>
+        <textarea class="mensagem" name="message" required placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar formulário</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="textos-footer">
+      <div>
+        <h1>Inovatech</h1>
+        <h2>
+          Chegou a hora de dar vida ao seu projeto. Conte com a nossa
+          expertise. Vamos conversar?
+        </h2>
+        <button type="button" class="button-contato" onclick="window.location.href='./contato.html'">Entre em
+          contato</button>
+        <p class="aviso">
+          Esse projeto foi feito durante o processo trainee.
+        </p>
+      </div>
+      <div class="footer-informaçao">
         <div>
-          <h1>Inovatech</h1>
-          <h2>
-            Chegou a hora de dar vida ao seu projeto. Conte com a nossa
-            expertise. Vamos conversar?
-          </h2>
-          <button type="button" class="button-contato" onclick="window.location.href='./contato.html'">Entre em contato</button>
-          <p class="aviso">
-            Esse projeto foi feito durante o processo trainee.
-          </p>
+          <p>Email:</p>
+          <p>inovatech@gmail.com</p>
         </div>
-        <div class="footer-informaçao">
-          <div>
-            <p>Email:</p>
-            <p>inovatech@gmail.com</p>
-          </div>
-          <div>
-            <p>Telefone:</p>
-            <p>(61) 97887-1209</p>
-          </div>
-          <div>
-            <p>Instagram:</p>
-            <p>inova.tech</p>
-          </div>
-          <div>
-            <p>Tiktok:</p>
-            <p>inova.techoficial</p>
-          </div>
+        <div>
+          <p>Telefone:</p>
+          <p>(61) 97887-1209</p>
+        </div>
+        <div>
+          <p>Instagram:</p>
+          <p>inova.tech</p>
+        </div>
+        <div>
+          <p>Tiktok:</p>
+          <p>inova.techoficial</p>
         </div>
       </div>
-      <div class="footer-links">
-        <a href="../index.html">Home</a>
-        <a href="quem-somos.html">Quem Somos</a>
-        <a href="parceiros.html">Parceirias</a>
-        <a href="contato.html">Contatos</a>
-        <a href="servicos.html">Serviços</a>
-      </div>
-    </footer>
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="../static/scripts/main.js"></script>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="parceiros.html">Parceirias</a>
+      <a href="contato.html">Contatos</a>
+      <a href="servicos.html">Serviços</a>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="../static/scripts/main.js"></script>
+<script src="../static/scripts/sidebar.js"></script>
+
 </html>
