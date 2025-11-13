@@ -1,18 +1,19 @@
-// Seleciona os elementos
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const sidebarMobile = document.getElementById('sidebarMobile');
 const sidebarOverlay = document.getElementById('sidebarOverlay');
 const hamburgerIcon = document.querySelector('.hamburger-icon');
 
-// Função para abrir/fechar sidebar
+const isIndexPage = window.location.pathname.endsWith('index.html');
+const basePath = isIndexPage ? './static/img/' : '../static/img/';
+
 function toggleSidebar() {
   const isOpen = sidebarMobile.classList.toggle('sidebar--open');
   sidebarOverlay.classList.toggle('sidebar--open');
-
+  
   if (isOpen) {
-    hamburgerIcon.src = "../static/img/hamburger.svg"; 
+    hamburgerIcon.src = `${basePath}hamburger.svg`; 
   } else {
-    hamburgerIcon.src = "../static/img/haburguer_fechado.svg"; 
+    hamburgerIcon.src = `${basePath}haburguer_fechado.svg`; 
   }
 }
 
@@ -25,6 +26,6 @@ sidebarLinks.forEach(link => {
   link.addEventListener('click', () => {
     sidebarMobile.classList.remove('sidebar--open');
     sidebarOverlay.classList.remove('sidebar--open');
-    hamburgerIcon.src = "../static/img/haburguer_fechado.svg"; 
+    hamburgerIcon.src = `${basePath}haburguer_fechado.svg`;
   });
 });
