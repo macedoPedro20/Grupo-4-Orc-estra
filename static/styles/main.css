@@ -287,12 +287,12 @@ body.sidebar-open {
 @media (max-width: 1023px) and (min-width: 768px) {
     header {
         height: 120px;
-        padding: 0 32px;
+        padding: 0 px;
     }
     
     .textos-header {
         gap: 32px;
-        font-size: 28px;
+        font-size: 24px;
     }
     
     footer {
