@@ -2,15 +2,29 @@
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const sidebarMobile = document.getElementById('sidebarMobile');
 const sidebarOverlay = document.getElementById('sidebarOverlay');
+const hamburgerIcon = document.querySelector('.hamburger-icon');
 
 // Função para abrir/fechar sidebar
 function toggleSidebar() {
-  sidebarMobile.classList.toggle('sidebar--open');
+  const isOpen = sidebarMobile.classList.toggle('sidebar--open');
   sidebarOverlay.classList.toggle('sidebar--open');
+
+  if (isOpen) {
+    hamburgerIcon.src = "../static/img/hamburger.svg"; 
+  } else {
+    hamburgerIcon.src = "../static/img/haburguer_fechado.svg"; 
+  }
 }
 
-// Clique no botão hamburguer
 mobileMenuBtn.addEventListener('click', toggleSidebar);
 
-// Clique no overlay fecha o menu
 sidebarOverlay.addEventListener('click', toggleSidebar);
+
+const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+sidebarLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    sidebarMobile.classList.remove('sidebar--open');
+    sidebarOverlay.classList.remove('sidebar--open');
+    hamburgerIcon.src = "../static/img/haburguer_fechado.svg"; 
+  });
+});
