@@ -74,7 +74,6 @@ main {
   text-align: center;
 }
 
-
 .container {
   position: absolute;
   bottom: 0;
@@ -84,11 +83,25 @@ main {
   background-color: var(--verde-cor-2);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15rem;
-  padding: 2rem 6.5rem;
+  justify-content: space-evenly; 
+  padding: 2rem 4rem;
   box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
+
+.container::before,
+.container::after {
+  display: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
 
 .container>div {
   display: flex;
@@ -97,8 +110,17 @@ main {
   position: relative;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 0 0 auto;
+  width: 230px; 
 }
 
+.container img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  z-index: 1;
+}
 .container>div p {
   position: static;
   margin: 0 0 0.5rem 0;
@@ -110,21 +132,13 @@ main {
   pointer-events: auto;
 }
 
-.container img {
-  display: block;
-  width: auto;
-  max-height: 12.5rem;
-  max-width: 100%;
-  object-fit: contain;
-  z-index: 1;
-}
-
 /* TABLET (768px a 1023px) */
 @media (max-width: 1023px) and (min-width: 768px) {
   .banner1 {
     min-height: 70vh;
     height: 45rem;
     background-position: center 30%;
+    overflow: hidden;
   }
 
   .mensagem-1 {
@@ -140,16 +154,29 @@ main {
   }
 
   .container {
-    gap: 8rem;
-    padding: 2rem 4rem;
+    gap: 5rem;
+    padding: 2rem 3rem;
+    justify-content: flex-start; /* Scroll começa da esquerda */
+  }
+
+  .container::before,
+  .container::after {
+    display: none; /* Remove os espaços pseudo-elementos no tablet */
+  }
+
+  .container > div {
+    width: 220px;
   }
 
   .container > div p {
     font-size: 1.3rem;
   }
 
+  /* IMAGENS TABLET */
   .container img {
-    max-height: 10rem;
+    width: 180px;
+    height: 135px;
+    object-fit: contain;
   }
 
   .banner2 {
@@ -167,6 +194,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    overflow: hidden;
   }
 
   .mensagem-1 {
@@ -186,34 +214,17 @@ main {
   }
 
   .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     gap: 2rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
     padding: 2rem 1rem;
-    height: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #0A3041 #e0e0e0;
+    justify-content: flex-start; 
   }
 
-  .container::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  .container::-webkit-scrollbar-track {
-    background: #e0e0e0;
-    border-radius: 4px;
-  }
-
-  .container::-webkit-scrollbar-thumb {
-    background-color: #0A3041;
-    border-radius: 4px;
+  .container::before,
+  .container::after {
+    display: none; 
   }
 
   .container > div {
-    flex: 0 0 auto;
     width: 220px;
     text-align: center;
     background: transparent;
@@ -235,8 +246,8 @@ main {
   }
 
   .container img {
-    width: 100%;
-    height: 140px;
+    width: 160px;
+    height: 120px;
     object-fit: contain;
     margin-bottom: 1rem;
   }
@@ -280,104 +291,13 @@ main {
   }
 
   .container img {
-    height: 120px;
+    width: 140px;
+    height: 105px;
+    object-fit: contain;
     margin-bottom: 0.8rem;
   }
 
   .banner2 {
     min-height: 70vh;
   }
-}@media (max-width: 768px) {
-
-  /* Banner principal */
-  .banner1 {
-    min-height: 100vh;
-    height: auto;
-    background-position: center;
-    padding: 4rem 1.5rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .mensagem-1 {
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    margin: 10rem 1rem 3rem 1rem;
-    line-height: 1.5;
-  }
-
-  .subtitulo {
-    position: static;
-    transform: none;
-    text-align: center;
-    font-size: 1.25rem;
-    margin-top: 2rem;
-  }
-
-  /* Container de projetos */
-  .container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem;
-  overflow-x: auto;            /* permite rolar lateralmente */
-  scroll-behavior: smooth;     /* rolagem suave */
-  padding: 2rem 1rem;
-  height: auto;
-  scrollbar-width: thin;       /* Firefox */
-  scrollbar-color: #0A3041 #e0e0e0; /* cores da barra */
-}
-
-.container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.container::-webkit-scrollbar-track {
-  background: #e0e0e0;
-  border-radius: 4px;
-}
-
-.container::-webkit-scrollbar-thumb {
-  background-color: #0A3041;
-  border-radius: 4px;
-}
-
-.container > div {
-  flex: 0 0 auto;
-  width: 220px;
-  text-align: center;
-  background: transparent; /* remove o branco */
-  border-radius: 10px;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.container > div p {
-  color: #fff; /* texto branco para contraste */
-  font-size: 1.2rem;
-  font-family: var(--fonte-texto);
-  font-weight: 600;
-  margin-top: 0.5rem;
-}
-
-
-.container > div:hover {
-  transform: translateY(-5px);
-}
-
-.container img {
-  width: 100%;
-  height: 140px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
-
-.container p {
-  font-size: 1.2rem;
-  color: #0A3041;
-  font-family: var(--fonte-texto);
-}
-
 }
