@@ -1,0 +1,77 @@
+/* Reset básico para remover margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base do corpo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #003D0D;
+}
+header, footer {
+  background-color: #01571E;
+  color: #FFFBDC;
+}
+/* Seletor por id */
+#sobre, #projetos, #contato, #painel-heroi {
+    border: 2px dashed #3FCC10;
+}
+
+/* Links */
+a {
+    color: #2EB600;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* Box Model */
+#sobre, #contato {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background-color: #FFFBDC;
+}
+#projetos, #painel-heroi {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background-color: #2EB600;
+}
+/* Display e layout básico*/
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+/* Projetos em cards */
+.lista-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card-projeto {
+  flex: 1 1 250px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #3FCC10;
+  background-color: #FFFFFF;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  .lista-projetos {
+    flex-direction: column;
+  }
+}

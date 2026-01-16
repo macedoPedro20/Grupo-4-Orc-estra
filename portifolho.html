@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio do Herói - Rafael</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Rafael</h1>
+    <p>Desenvolvedor em Treinamento</p>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#painel-heroi">Painel do Herói</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <img src="Rafael.jpeg" alt="Foto do herói"width="200">
+      <p>Olá! Meu nome é Rafael. Sou estudante de Engenharia de Software da UnB e estou começando minha jornada no desenvolvimento web.</p>
+    </section>
+
+    <section id="projetos">
+      <h2>Meus Projetos</h2>
+      <table border="1">
+        <tr>
+          <th>Projeto</th>
+          <th>Descrição</th>
+          <th>Link</th>
+        </tr>
+        <tr class="card-projeto">
+          <td>O primeiro site que criei em grupo</td>
+          <td>Página criada no processo trainee</td>
+          <td><a href="index.html">Ver</a></td>
+        </tr>
+      </table>
+   
+
+          <table border="2">
+                        <tr>
+          <th>Projeto</th>
+          <th>Descrição</th>
+          <th>Link</th>
+        </tr>
+             <tr class="card-projeto">
+          <td>O primeiro site que fiz sozinho</td>
+          <td>É um site motivacional para pessoas LGBTQ+</td>
+          <td><a href="pride.html">Ver</a></td>
+             </tr>
+        </table>
+
+
+          <table border="3">
+                        <tr>
+          <th>Projeto</th>
+          <th>Descrição</th>
+          <th>Link</th>
+        </tr>
+             <tr class="card-projeto">
+          <td>Vídeo em 3D no YouTube usando o Blender</td>
+          <td>Inspirado nas Backrooms e na artista Yayoi Kusama</td>
+          <td><a href="https://www.youtube.com/watch?v=JgHjjIiH95A">Ver</a></td>
+             </tr>
+        </table>
+
+       </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form action="#" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="30"></textarea>
+        <br><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="painel-heroi">
+      <h2>Painel do Herói</h2>
+      <!-- Exemplo de estrutura estática, que será animada no módulo de JS -->
+      <ul>
+        <li>Nome: <span id="hero-nome">Rafael</span></li>
+        <li>Classe: <span id="hero-classe">Aspirante a Dev</span></li>
+        <li>Nível: <span id="hero-nivel">5</span></li>
+        <li>XP: <span id="hero-xp">0</span></li>
+      </ul>
+      <button id="btn-xp">+10 XP</button>
+      <button id="btn-oraculo">Consultar Oráculo</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Rafael. Todos os direitos reservados(sem fins lucrativos).</p>
+  </footer>
+  <script src="main.js"></script>
+  
+</body>
+</html>
